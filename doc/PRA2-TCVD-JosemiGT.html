@@ -14611,8 +14611,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h1 id="PRA-2:-%C2%BFC%C3%B3mo-realizar-la-limpieza-y-an%C3%A1lisis-de-datos?">PRA 2: &#191;C&#243;mo realizar la limpieza y an&#225;lisis de datos?<a class="anchor-link" href="#PRA-2:-%C2%BFC%C3%B3mo-realizar-la-limpieza-y-an%C3%A1lisis-de-datos?">&#182;</a></h1><div class="alert alert-block alert-info">
 <strong>Nombre y apellidos:</strong> José Miguel Gamarro Tornay     
 </div>
-<p>Para la elaboración de este trabajo, se utilizará el lenguaje de programación Python, como herramienta que permita apoyarnos en ella para automatizar procesos de limpieza y de análisis.</p>
-<p>Para ello se importarán las siguientes librerías:</p>
+<p>Para la elaboración de este trabajo, se utilizará el lenguaje de programación Python y algunas de sus librerías, como herramienta para automatizar procesos de limpieza y de análisis de datos.</p>
+<p>Se importarán las siguientes librerías:</p>
 
 </div>
 </div>
@@ -14644,8 +14644,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="1.-Descripci%C3%B3n-del-dataset.">1. Descripci&#243;n del dataset.<a class="anchor-link" href="#1.-Descripci%C3%B3n-del-dataset.">&#182;</a></h2><p>Para el presente trabajo académico, el dataset elegido es el que se indica en la documentación de la práctica: &quot;Heart Attack Analysis &amp; Prediction dataset&quot;.</p>
 <p>Este dataset contiene dos csv, en el principal, denominado &quot;heart.csv&quot;, se reflejan para un total de 303 pacientes, una serie de información médica y personal (año y sexo) junto a si tiene probabilidad mayor de infarto o no.</p>
-<p>Se establece como objetivo, el análisis de la posible relación entre diferentes parámetros médicos (presión arterial en reposo, colesterol, frecuencia máxima alcanzada, glucemia en ayunas y los resultados electrocardiográficos) y la correlación que estos existen con mayor probabilidad de infarto.</p>
-<p>Este análisis puede servir para que médicos puedan detectar de una forma sencilla si un paciente tiene más o menos probabilidad de sufrir un infarto según los indicadores.</p>
+<p>Se establece como objetivo, el análisis de la posible relación entre diferentes parámetros médicos (presión arterial en reposo, colesterol, frecuencia máxima alcanzada, glucemia en ayunas y resultados electrocardiográficos) y la correlación de estos con una mayor probabilidad de infarto.</p>
+<p>Este análisis puede servir para que médicos puedan detectar de una forma sencilla si un paciente tiene más o menos probabilidad de sufrir un infarto según los indicadores establecidos previamente que se quieren considerar.</p>
 
 </div>
 </div>
@@ -14807,7 +14807,7 @@ memory usage: 33.3 KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Si el problema quisiese determinar si los sintomas son similares para ambos géneros, si sería interesante quedarnos con datos de género, pero para el problema planteado podemos obviar el género y edad al querer únicamente basarnos en ver la relación de datos médicos con la probabilidad de infarto.</p>
+<p>Si el problema quisiese determinar si los síntomas son similares para ambos géneros, sí sería interesante quedarnos con datos de género, pero para el problema planteado podemos obviar el género y edad al querer únicamente basarnos en ver la relación de datos médicos con la probabilidad de infarto.</p>
 
 </div>
 </div>
@@ -14876,7 +14876,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Por lo tanto, los valores nulos no requieren de ninguna acción correctiva sobre los que existiese como podría ser re-calcularlos según los valores vecinos o directamente eliminarlos.</p>
+<p>Por lo tanto, los valores nulos no requieren de ninguna acción correctiva.</p>
 <p>Por otro lado, vamos a estudiar si hay elementos ceros entre las columnas que hemos seleccionado. Como el tipo de dolor torácico, la glucemia en ayunas mayor a 120 mg/dl, los resultados electrocardiográficos en reposo y el resultado son en realidad valores categóricos en los que algunos de sus estados pueden ser 0, no tiene sentido revisar si tienen elementos ceros, así que vamos a centrarnos en el resto.</p>
 
 </div>
@@ -15347,43 +15347,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Tras observar las gráficas, podemos concluir que mientras que la presión arterial en reposo y el colesterol tienen valores extremos por ser muy superiores a la media, la frecuencia máxima alcanzada es al revés, se trata de un valor muy por de bajo de la media, lo que se puede intuir que este valor si se puede tratar de un error, lo cual es más difícil afirmar en el resto de valores extremos. Por lo tanto únicamente se eliminará este valor mínimo extremo de frecuencia cardíaca máxima.</p>
-
-</div>
-</div>
-</div>
-</div><div  class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## heart_dataset = heart_dataset.loc[maximum_heart_rate_outliers]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div>
-<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.-An%C3%A1lisis-de-los-datos">4. An&#225;lisis de los datos<a class="anchor-link" href="#4.-An%C3%A1lisis-de-los-datos">&#182;</a></h2><h3 id="4.1.-Selecci%C3%B3n-de-los-grupos-de-datos-que-se-van-a-comparar">4.1. Selecci&#243;n de los grupos de datos que se van a comparar<a class="anchor-link" href="#4.1.-Selecci%C3%B3n-de-los-grupos-de-datos-que-se-van-a-comparar">&#182;</a></h3><p>Se comparará los valores de:</p>
-<ul>
-<li>Presión arterial en reposo con la alta o baja probabilidad de infarto.</li>
-<li>Colesterol con la alta o baja probabilidad de infarto.</li>
-<li>Frecuencia cardíaca máxima con la alta o baja probabilidad de infarto.</li>
-<li>El tipo de dolor torácico con la alta o baja probabilidad de infarto.</li>
-<li>Glucemia en ayunas alta con alta o baja probabilidad de infarto.</li>
-<li>Resultados electrocardiográficos con alta o baja probabilidad de infarto.</li>
-</ul>
+<p>Tras observar las gráficas, podemos concluir que mientras que la presión arterial en reposo y el colesterol tienen valores extremos por ser muy superiores a la media, la frecuencia máxima alcanzada es al revés, se trata de un valor muy por debajo de la media, lo que se puede intuir que este valor sí se puede tratar de un error, lo cual es más difícil afirmar en el resto de valores extremos.</p>
 
 </div>
 </div>
@@ -15655,7 +15619,7 @@ Valor p: 6.620732165174559e-05
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Viendo los resultados, se puede concluir que como todos los p valores son muy inferiores al nivel de significancia (0,05), podemos concluir que no siguen una distribución normal.</p>
+<p>Viendo los resultados, se puede concluir que como todos los p valores son muy inferiores al nivel de significancia (0,05), estos no siguen una distribución normal.</p>
 
 </div>
 </div>
@@ -15667,7 +15631,7 @@ Valor p: 6.620732165174559e-05
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="4.3.-Aplicaci%C3%B3n-de-pruebas-estad%C3%ADsticas-para-comparar-los-grupos-de-datos">4.3. Aplicaci&#243;n de pruebas estad&#237;sticas para comparar los grupos de datos<a class="anchor-link" href="#4.3.-Aplicaci%C3%B3n-de-pruebas-estad%C3%ADsticas-para-comparar-los-grupos-de-datos">&#182;</a></h3><p>Como las diferentes datos del dataset no presentan una distribución normal, las pruebas estadísticas que se utilizarán para analizar y comparar los diferentes grupos serán paramétricas. Para las variables dicotómicas, utilizaremos el test de Wilcoxon.</p>
+<h3 id="4.3.-Aplicaci%C3%B3n-de-pruebas-estad%C3%ADsticas-para-comparar-los-grupos-de-datos">4.3. Aplicaci&#243;n de pruebas estad&#237;sticas para comparar los grupos de datos<a class="anchor-link" href="#4.3.-Aplicaci%C3%B3n-de-pruebas-estad%C3%ADsticas-para-comparar-los-grupos-de-datos">&#182;</a></h3><p>Como los diferentes datos del dataset no presentan una distribución normal, las pruebas estadísticas que se utilizarán para analizar y comparar los diferentes grupos serán paramétricas. Para las variables dicotómicas, utilizaremos el test de Wilcoxon.</p>
 
 </div>
 </div>
@@ -15753,7 +15717,7 @@ Valor p: 7.224055883238502e-21
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>en el test se muestra que las diferencias entre los grupos de datos son estadísticamente significativas (p &lt; 0.05). Es decir, la glucemia es estadisticamente diferentes entre personas con más probabilidad de infartos y con menos probabilidad.</p>
+<p>En el test anterior se muestra que las diferencias entre los grupos de datos son estadísticamente significativas (p &lt; 0.05). Es decir, la glucemia es estadísticamente diferentes entre personas con más probabilidad de infartos que con las de menos probabilidad.</p>
 
 </div>
 </div>
@@ -15765,7 +15729,7 @@ Valor p: 7.224055883238502e-21
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>El test equivalente cuando se tienen 3 o más grupos de datos, como es el caso del tipo de dolor torácico y el resultados electrocardiográficos, es el test de Kruskal-Wallis:</p>
+<p>El test equivalente cuando se tienen 3 o más grupos de datos, como es el caso del tipo de dolor torácico y el de resultados electrocardiográficos, es el test de Kruskal-Wallis:</p>
 
 </div>
 </div>
@@ -15905,7 +15869,7 @@ Valor p: 0.5804490681583108
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En este caso, observamos que mientras el dolor torácico si tiene una cierta diferencia estadística entre grupos por probabilidad de infarto, pero no podemos asegurar lo mismo para el tipo e electrocardiagrama en repeso ya que para este caso si hay un p value significativo al ser mayor que 0,05.</p>
+<p>En este caso, observamos que el dolor torácico sí tiene una cierta diferencia estadística entre grupos por probabilidad de infarto, pero no podemos asegurar lo mismo para el tipo e electrocardiagrama en reposo ya que para este caso sí hay un p value significativo al ser mayor que 0,05.</p>
 <p>A continuación, para las variables numéricas, vamos a estudiar sus correlaciones utilizando la correlación de Spearman ya que no podemos confirmar la normalidad y homocedasticidad.</p>
 
 </div>
@@ -16051,7 +16015,7 @@ Valor p: 1.697337638656049e-14
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Se observa que tiene un p significativo no (p &lt; 0.05) y por lo tanto se puede concluir que hay una diferencia significativa entre las medias de los dos grupos y que por lo tanto si es un factor a tener en cuenta para un infarto.</p>
+<p>Se observa que tiene un p no significativo (p &lt; 0.05) y por lo que se puede concluir que hay una diferencia significativa entre las medias de los dos grupos y que por lo tanto sí es un factor a tener en cuenta para un infarto.</p>
 <p>Por último comparamos con la presión arterial en reposo:</p>
 
 </div>
@@ -16107,7 +16071,7 @@ Valor p: 0.011546059200233312
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Y se observa que tiene, al igual que el nivel de colesterol, un p significativo (p &gt; 0.05) y por lo tanto se puede concluir que no hay una diferencia significativa entre las medias de los dos grupos y que por lo tanto no se intuye correlación.</p>
+<p>Y se observa que tiene, al igual que el nivel de colesterol, un p significativo (p &gt; 0.05) y por lo que se puede concluir que no hay una diferencia significativa entre las medias de los dos grupos y que por lo tanto no se intuye correlación.</p>
 
 </div>
 </div>
@@ -16119,7 +16083,7 @@ Valor p: 0.011546059200233312
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="6.-Resoluci%C3%B3n-del-problema">6. Resoluci&#243;n del problema<a class="anchor-link" href="#6.-Resoluci%C3%B3n-del-problema">&#182;</a></h2><p>A partir del análisis anterior, hemos podido profundizar en qué variables médicas tienen una mayor correlación con probabilidad de infarto. Con esta información se puede intuir en un paciente las probabilidades de que sufra un infarto. Se observan que variables como la frecuencia cardiaca máxima alcanzada, el tipo de dolor torácico y la glucemia en ayunas mayor a 120 mg/dl pueden ser indicadores interesantes al tener una cierta correlación. Por otro lado el resto de variables no encuentran diferencias estadísticas.</p>
+<h2 id="6.-Resoluci%C3%B3n-del-problema">6. Resoluci&#243;n del problema<a class="anchor-link" href="#6.-Resoluci%C3%B3n-del-problema">&#182;</a></h2><p>A partir del análisis anterior, hemos podido profundizar en qué variables médicas se tiene una mayor correlación con probabilidad de infarto. Con esta información se puede intuir en un paciente las probabilidades de que sufra un infarto. Se observan que variables como la frecuencia cardiaca máxima alcanzada, el tipo de dolor torácico y la glucemia en ayunas mayor a 120 mg/dl pueden ser indicadores interesantes al tener una cierta correlación. Por otro lado el resto de variables no encuentran diferencias estadísticas.</p>
 <p>Por lo tanto, podemos concluir que de las variables analizadas, hay 3 que permiten darnos indicadores médicos que puedan aproximar en cierta medida la probabilidad de infarto.</p>
 
 </div>
