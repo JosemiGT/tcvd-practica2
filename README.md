@@ -19,4 +19,4 @@ El dataset utilizado está disponible en [Kaggle-Heart-Attack-Analysis](https://
 
 ## Vídeo de presentación
 
-Enlace al vídeo de presentación de la práctica: [https://drive.google.com/...](https://drive.google.com/...)
+Enlace al vídeo de presentación de la práctica: [Vídeo de presentación de la PRA-2](https://drive.google.com/file/d/15bnbml5J2E5s0cowaXCg9CI3C2KCBymU/view?usp=sharing)
